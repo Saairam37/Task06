@@ -1,6 +1,7 @@
 import CartList from './CartList';
 import { useAppData } from '../context/AppContextComponent';
 import { useNavigate } from 'react-router';
+import Noitems from './Noitems';
 
 const CartPage = () => {
 
@@ -10,7 +11,8 @@ const navigate = useNavigate();
 const {sumAmt} = useAppData();
 
   return (
-    <><h1 className="fixed z-20 font-bold text-[15px] sm:text-[20px] md:text-[30px] font-sans w-full px-[30px] text-[#ffcc00] bg-linear-180 from-[#000000] via-[#000000aa] to-[#0000ff00] flex gap-[15px] sm:gap-[75px]">ADD TO CART <div className='justify-self-center'>Total Price: <span className='text-red-500 line-through'> ${sumAmt.toFixed(2)}</span> $<span>{(sumAmt*0.9).toFixed(2)}</span></div></h1>
+    <>
+    <h1 className="fixed z-20 font-bold text-[15px] sm:text-[20px] md:text-[30px] font-sans w-full px-[30px] text-[#ffcc00] bg-linear-180 from-[#000000] via-[#000000aa] to-[#0000ff00] flex gap-[15px] sm:gap-[75px]">ADD TO CART <div className='justify-self-center'>Total Price: <span className='text-red-500 line-through'> ${sumAmt.toFixed(2)}</span> $<span>{(sumAmt*0.9).toFixed(2)}</span></div></h1>
     <div className="relative bg-gray-200 h-[100vh] grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-[20px] px-[20px] py-[50px]">
         {carts.map(tarID=> {
            const found = todos.find(obj => obj.id === tarID);
@@ -22,6 +24,7 @@ const {sumAmt} = useAppData();
           }
         )}
     </div>
+    <Noitems/>
     <div className="fixed z-20 top-[30px] right-[30px] bg-green-500 font-bold rounded-full h-[30px] w-[60px] flex justify-center flex-col showw"><button onClick={()=>{navigate("/")}}>HOME</button></div>
     </>
   )
