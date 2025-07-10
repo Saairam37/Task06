@@ -2,7 +2,7 @@ import { useAppData } from '../context/AppContextComponent';
 
 const Button = ({todoID}) => {
 
-    const {renderList,carts, deleteList} = useAppData();
+    const {renderList, carts, deleteList} = useAppData();
     
 
 
