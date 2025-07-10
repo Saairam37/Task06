@@ -19,7 +19,7 @@ function Home() {
         />
       )}
     </div>
-    <div className="fixed z-20 top-[30px] right-[30px] bg-green-500 font-bold flex justify-center rounded-full h-[30px] w-[60px] flex-col showw"><button onClick={()=>{navigate("/courses")}}><img className="w-[20px] inline" src="/cart.png"/>     <span>{carts.length}</span></button></div>
+    <div className="fixed z-20 top-[30px] right-[30px] bg-green-500 font-bold flex justify-center rounded-full h-[30px] w-[60px] flex-col showw"><button onClick={()=>{navigate("/cartpage")}}><img className="w-[20px] inline" src="/cart.png"/>     <span>{carts.length}</span></button></div>
 
     </div>
     </>
