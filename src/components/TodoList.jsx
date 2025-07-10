@@ -11,7 +11,6 @@ const TodoList = ({todo}) => {
         <div className='place-content-center text-gray-700 font-semibold'>${todo.price}</div>
         <Button
             todoID ={todo.id}
-            todoprice ={todo.price}
         />
     </div>
   )
